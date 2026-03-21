@@ -1,0 +1,75 @@
+export const MAX_MECHANICS: i32 = 8;
+export const MAX_CLEANERS: i32 = 8;
+export const MAX_SECURITY: i32 = 8;
+export const MAX_ENTERTAINERS: i32 = 8;
+export const MAX_EMPLOYEE_AREAS: i32 = 4;
+export const EMPLOYEE_AREA_RADIUS: i32 = 6;
+
+export const MECHANIC_HIRE_COST: i32 = 350;
+export const MECHANIC_MONTHLY_COST: i32 = 75;
+export const CLEANER_HIRE_COST: i32 = 300;
+export const CLEANER_MONTHLY_COST: i32 = 55;
+export const SECURITY_HIRE_COST: i32 = 420;
+export const SECURITY_MONTHLY_COST: i32 = 80;
+export const ENTERTAINER_HIRE_COST: i32 = 380;
+export const ENTERTAINER_MONTHLY_COST: i32 = 70;
+
+export const mechActive = new StaticArray<u8>(MAX_MECHANICS);
+export const mechX = new StaticArray<i32>(MAX_MECHANICS);
+export const mechY = new StaticArray<i32>(MAX_MECHANICS);
+export const mechTarget = new StaticArray<i32>(MAX_MECHANICS);
+export const mechRepairTimer = new StaticArray<i32>(MAX_MECHANICS);
+export const mechUid = new StaticArray<i32>(MAX_MECHANICS);
+export const mechHiredTick = new StaticArray<i32>(MAX_MECHANICS);
+export const mechRepairsCompleted = new StaticArray<i32>(MAX_MECHANICS);
+export const mechPatrolX = new StaticArray<i32>(MAX_MECHANICS);
+export const mechPatrolY = new StaticArray<i32>(MAX_MECHANICS);
+export const mechAreaCount = new StaticArray<i32>(MAX_MECHANICS);
+export const mechAreaX = new StaticArray<i32>(MAX_MECHANICS * MAX_EMPLOYEE_AREAS);
+export const mechAreaY = new StaticArray<i32>(MAX_MECHANICS * MAX_EMPLOYEE_AREAS);
+export let mechanicCount: i32 = 0;
+
+export const cleanerActive = new StaticArray<u8>(MAX_CLEANERS);
+export const cleanerX = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerY = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerTargetX = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerTargetY = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerCleanTimer = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerUid = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerHiredTick = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerPathsCleaned = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerPatrolX = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerPatrolY = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerAreaCount = new StaticArray<i32>(MAX_CLEANERS);
+export const cleanerAreaX = new StaticArray<i32>(MAX_CLEANERS * MAX_EMPLOYEE_AREAS);
+export const cleanerAreaY = new StaticArray<i32>(MAX_CLEANERS * MAX_EMPLOYEE_AREAS);
+export let cleanerCount: i32 = 0;
+
+export const securityActive = new StaticArray<u8>(MAX_SECURITY);
+export const securityX = new StaticArray<i32>(MAX_SECURITY);
+export const securityY = new StaticArray<i32>(MAX_SECURITY);
+export const securityTargetVisitor = new StaticArray<i32>(MAX_SECURITY);
+export const securityPatrolX = new StaticArray<i32>(MAX_SECURITY);
+export const securityPatrolY = new StaticArray<i32>(MAX_SECURITY);
+export const securityUid = new StaticArray<i32>(MAX_SECURITY);
+export const securityHiredTick = new StaticArray<i32>(MAX_SECURITY);
+export const securityIncidentsHandled = new StaticArray<i32>(MAX_SECURITY);
+export const securityAreaCount = new StaticArray<i32>(MAX_SECURITY);
+export const securityAreaX = new StaticArray<i32>(MAX_SECURITY * MAX_EMPLOYEE_AREAS);
+export const securityAreaY = new StaticArray<i32>(MAX_SECURITY * MAX_EMPLOYEE_AREAS);
+export let securityCount: i32 = 0;
+
+export const entertainerActive = new StaticArray<u8>(MAX_ENTERTAINERS);
+export const entertainerX = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerY = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerPatrolX = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerPatrolY = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerUid = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerHiredTick = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerGuestsCheered = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerAreaCount = new StaticArray<i32>(MAX_ENTERTAINERS);
+export const entertainerAreaX = new StaticArray<i32>(MAX_ENTERTAINERS * MAX_EMPLOYEE_AREAS);
+export const entertainerAreaY = new StaticArray<i32>(MAX_ENTERTAINERS * MAX_EMPLOYEE_AREAS);
+export let entertainerCount: i32 = 0;
+
+export let nextEmployeeUid: i32 = 1;

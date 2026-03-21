@@ -1,0 +1,31 @@
+import { MAX_VISITORS, NEED_COUNT } from '../constants';
+
+export const vX = new StaticArray<i32>(MAX_VISITORS);
+export const vY = new StaticArray<i32>(MAX_VISITORS);
+export const vState = new StaticArray<u8>(MAX_VISITORS);
+export const vTarget = new StaticArray<i32>(MAX_VISITORS);
+export const vTimer = new StaticArray<i32>(MAX_VISITORS);
+export const vSatisfaction = new StaticArray<i32>(MAX_VISITORS);
+export const vNeeds = new StaticArray<i32>(MAX_VISITORS * NEED_COUNT);
+export const vPaid = new StaticArray<u8>(MAX_VISITORS);
+export const vStuckTimer = new StaticArray<i32>(MAX_VISITORS);
+export const vWallet = new StaticArray<i32>(MAX_VISITORS);
+export const vQueueX = new StaticArray<i32>(MAX_VISITORS);
+export const vQueueY = new StaticArray<i32>(MAX_VISITORS);
+export const vQueueOrder = new StaticArray<i32>(MAX_VISITORS);
+export const vLevel = new StaticArray<u8>(MAX_VISITORS);
+export const vExcitement = new StaticArray<i32>(MAX_VISITORS);
+export const vExcitementTolerance = new StaticArray<i32>(MAX_VISITORS);
+export const vNausea = new StaticArray<i32>(MAX_VISITORS);
+export const vPukeTimer = new StaticArray<i32>(MAX_VISITORS);
+export const vCriminal = new StaticArray<u8>(MAX_VISITORS);
+export const vCrimeTimer = new StaticArray<i32>(MAX_VISITORS);
+export const vCrimeCooldown = new StaticArray<i32>(MAX_VISITORS);
+export const vCrowdComplaintCooldown = new StaticArray<i32>(MAX_VISITORS);
+export const vBalloonTimer = new StaticArray<i32>(MAX_VISITORS);
+export const vUmbrellaTimer = new StaticArray<i32>(MAX_VISITORS);
+
+export let activeVisitors: i32 = 0;
+export let tickCount: i32 = 0;
+export let spawnCooldown: i32 = 0;
+export let rngState: i32 = 12345;
