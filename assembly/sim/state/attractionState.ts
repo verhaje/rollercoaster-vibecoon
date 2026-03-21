@@ -1,0 +1,37 @@
+import { MAX_INSTANCES, MAX_TEMPLATES } from '../constants';
+
+export const tmplFootprintW = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplFootprintH = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplBuildPrice = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplTicketPrice = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplCapacity = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplCategory = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplAppeal = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplRideTicks = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplMonthlyCost = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplRequiredExcitement = new StaticArray<i32>(MAX_TEMPLATES);
+export const tmplNauseaGain = new StaticArray<i32>(MAX_TEMPLATES);
+export let templateCount: i32 = 0;
+
+export const instTemplateId = new StaticArray<i32>(MAX_INSTANCES);
+export const instX = new StaticArray<i32>(MAX_INSTANCES);
+export const instY = new StaticArray<i32>(MAX_INSTANCES);
+export const instRotation = new StaticArray<i32>(MAX_INSTANCES);
+export const instActive = new StaticArray<u8>(MAX_INSTANCES);
+export const instTicketPrice = new StaticArray<i32>(MAX_INSTANCES);
+export const instCapacity = new StaticArray<i32>(MAX_INSTANCES);
+export const instCurrentRiders = new StaticArray<i32>(MAX_INSTANCES);
+export const instEntranceX = new StaticArray<i32>(MAX_INSTANCES);
+export const instEntranceY = new StaticArray<i32>(MAX_INSTANCES);
+export const instExitX = new StaticArray<i32>(MAX_INSTANCES);
+export const instExitY = new StaticArray<i32>(MAX_INSTANCES);
+export const instBuildTick = new StaticArray<i32>(MAX_INSTANCES);
+export const instBroken = new StaticArray<u8>(MAX_INSTANCES);
+export const instRepairTicks = new StaticArray<i32>(MAX_INSTANCES);
+export const instTotalVisitors = new StaticArray<i32>(MAX_INSTANCES);
+export const instTotalRevenue = new StaticArray<i32>(MAX_INSTANCES);
+export const instMonthlyRevenue = new StaticArray<i32>(MAX_INSTANCES);
+export const instQueueLength = new StaticArray<i32>(MAX_INSTANCES);
+export const instEstimatedWaitTicks = new StaticArray<i32>(MAX_INSTANCES);
+export const instPopularity = new StaticArray<i32>(MAX_INSTANCES);
+export let instanceCount: i32 = 0;
